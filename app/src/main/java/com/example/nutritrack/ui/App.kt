@@ -7,14 +7,15 @@ import com.example.nutritrack.navigation.AppNavigation
 import com.example.nutritrack.ui.components.BottomNavigationBar
 
 @Composable
-fun App(){
+fun App() {
     val navController = rememberNavController()
 
     Scaffold(
         bottomBar = {
             BottomNavigationBar(navController = navController)
         }
-    ) { innerPadding -> AppNavigation(navController = navController, innerPadding = innerPadding)
+    ) { innerPadding ->
+        AppNavigation(navController = navController, innerPadding = innerPadding)
 
     }
 }

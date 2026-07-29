@@ -6,9 +6,9 @@ import com.example.nutritrack.navigation.Screen
 
 
 @Composable
-fun BottomNavigationBar(navController: NavHostController){
+fun BottomNavigationBar(navController: NavHostController) {
     val items = listOf(Screen.Home, Screen.Add, Screen.Progress, Screen.Profile)
-    items.forEach{
+    items.forEach {
 
     }
 }
