@@ -1,5 +1,6 @@
 package com.example.nutritrack.ui
 
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
@@ -11,6 +12,8 @@ fun App() {
     val navController = rememberNavController()
 
     Scaffold(
+        containerColor = MaterialTheme.colorScheme.background,
+
         bottomBar = {
             BottomNavigationBar(navController = navController)
         }
