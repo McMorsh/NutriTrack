@@ -26,13 +26,15 @@ fun BottomNavigationBar(navController: NavHostController) {
             NavigationBarItem(
                 selected = currentRoute == screen.route,
                 onClick = {
-                    navController.navigate(screen.route) {
-                        popUpTo(navController.graph.startDestinationId) {
-                            saveState = true
+                    if (screen.route == Screen.Home.route) {
+                        navController.popBackStack(
+                            Screen.Home.route,
+                            inclusive = false
+                        )
+                    } else {
+                        navController.navigate(screen.route) {
+                            launchSingleTop = true
                         }
-
-                        launchSingleTop = true
-                        restoreState = true
                     }
                 },
                 icon = {
