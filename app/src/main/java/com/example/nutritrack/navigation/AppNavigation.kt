@@ -20,7 +20,15 @@ fun AppNavigation(navController: NavHostController, innerPadding: PaddingValues)
         startDestination = Screen.Home.route,
         modifier = Modifier.padding(innerPadding)
     ) {
-        composable(Screen.Home.route) { HomeScreen() }
+        composable(Screen.Home.route) {
+            HomeScreen(
+                onAddClick = {
+                    navController.navigate(Screen.Add.route)
+                },
+                onProfileClick = {
+                    navController.navigate(Screen.Profile.route)
+                })
+        }
         composable(Screen.Add.route) { AddScreen() }
         composable(Screen.Progress.route) { ProgressScreen() }
         composable(Screen.Profile.route) { ProfileScreen() }
