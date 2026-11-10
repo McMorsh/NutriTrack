@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.nutritrack"
+    namespace = "io.github.mcmorsh.nutritrack"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.nutritrack"
+        applicationId = "io.github.mcmorsh.nutritrack"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
